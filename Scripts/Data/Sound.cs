@@ -16,6 +16,19 @@ public class Sound
     public bool loop;
     public bool oneShot;
     public bool playOnPause;
+
+    public Sound(Sound template, AudioClip clip)
+    {
+        this.name = clip.name;
+        this.clip = clip;
+        this.output = template.output;
+        this.volume = template.volume;
+        this.basePitch = template.basePitch;
+        this.pitchFluctuation = template.pitchFluctuation;
+        this.loop = template.loop;
+        this.oneShot = template.oneShot;
+        this.playOnPause = template.playOnPause;
+    }
 }
 
 public class SoundPlayer
